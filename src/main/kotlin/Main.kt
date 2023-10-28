@@ -1,9 +1,14 @@
 fun main(args: Array<String>) {
     val sentence = "аа абв аб арбуз аб где арт ант аптека ананас банан"
+    val example = "аь аь ла"
+    val empty = ""
     findWords(sentence)
+    findWords(example)
+    findWords(empty)
 }
 
 fun findWords(inputString: String) {
+    println("Входная строка: $inputString")
     var found = false
     var result = ""
     var currentWord = ""
@@ -30,4 +35,5 @@ fun findWords(inputString: String) {
     } else {
         println("Слов на 'а' больше 3 символов не найдено")
     }
+    println("--------------------------------")
 }
